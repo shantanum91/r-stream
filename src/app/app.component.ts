@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   play(video) {
-    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('/api/videos/video?filename=' + video);
+    this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('/api/videos/video?filename=' + encodeURIComponent(video));
   }
 
 }
