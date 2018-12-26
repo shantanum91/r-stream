@@ -6,7 +6,7 @@ var router = express.Router();
 var mediaPath = "/Users/shantanu/Movies";
 var recursiveReadSync = require('recursive-readdir-sync');
 
-const extensions = ['.mkv'];
+const extensions = ['.mkv', '.mp4', '.flv', '.wmv'];
 
 router.get('/', function (req, res) {
     var files = fs.readdirSync(mediaPath);
